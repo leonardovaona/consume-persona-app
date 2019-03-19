@@ -13,7 +13,8 @@ public class Persona {
 
         public Persona(){}
 
-        public Persona (String nombre, String apellido, String direccion, Integer edad) {
+        public Persona (Long id, String nombre, String apellido, String direccion, Integer edad) {
+            this.id = id;
             this.nombre = nombre;
             this.apellido = apellido;
             this.direccion = direccion;

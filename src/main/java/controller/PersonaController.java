@@ -15,18 +15,4 @@ import java.util.List;
 @RequestMapping("/api/personas")
 public class PersonaController {
 
-    @RequestMapping(method = RequestMethod.GET)
-   public ResponseEntity<List<Persona>> getAllPersonas() {
-            List<Persona> personaList = new ArrayList<>();
-
-        }
-
-/*    @RequestMapping(value = "/objects", method = RequestMethod.GET)
-    public List<Object> getObjects() {
-
-        ResponseEntity<Object[]> response = restTemplate.getForEntity(
-                "http://url", Object[].class);
-
-        return Arrays.asList(response.getBody());
-    }*/
 }
