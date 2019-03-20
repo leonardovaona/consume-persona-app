@@ -20,14 +20,14 @@ public class PersonaClient {
         System.out.println("Calling Get Using ParameterizedTypeReference");
         personaClient.getAllPersonasUsingParameterizedTypeReference();
 
-        System.out.println("Calling Get using wrapper class");
-        personaClient.getAllPersonasUsingWrapperClass();
+        /*System.out.println("Calling Get using wrapper class");
+        personaClient.getAllPersonasUsingWrapperClass();*/
 
         System.out.println("Calling POST using normal list");
         personaClient.createPersonasUsingLists();
 
-        System.out.println("Calling POST using wrapper class");
-        personaClient.createPersonasUsingWrapperClass();
+/*        System.out.println("Calling POST using wrapper class");
+        personaClient.createPersonasUsingWrapperClass();*/
     }
 
     public PersonaClient(){}
@@ -63,14 +63,12 @@ public class PersonaClient {
 
         RestTemplate restTemplate = new RestTemplate();
 
-        List<Persona> newPersonaList = new ArrayList<>();
-        newPersonaList.add(new Persona(1L,"leonardo", "vaona", "pavon", 33));
-        newPersonaList.add(new Persona(2L,"natalia", "tasistro", "san juan", 33));
+        Persona newPersona = new Persona(1000L,"leonardo", "vaona", "pavon", 33);
 
         restTemplate.postForObject(
-                "http://localhost/4300/api/personas/",
-                newPersonaList,
-                ResponseEntity.class);
+                "http://localhost:4300/api/personas",
+                newPersona,
+                Persona.class);
 
     }
 
@@ -87,5 +85,4 @@ public class PersonaClient {
                 newPersonaList,
                 ResponseEntity.class);
     }
-
 }

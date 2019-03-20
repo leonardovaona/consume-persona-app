@@ -3,6 +3,7 @@ package model;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class PersonaList {
 
     public List<Persona> personas;
